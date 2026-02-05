@@ -1,0 +1,40 @@
+.grid-container{
+    padding: 0 .5rem;
+    display: grid;
+    gap: 8px;
+    grid-template-areas:
+        "header header header"
+        "aside main main"
+        "player player player";
+    grid-template-columns: 380px 1fr;
+    grid-template-rows: 1fr auto;
+    width: 100vw;
+}
+
+.header{
+    grid-area: header;
+    height: 60px;
+}
+
+.aside{
+    background-color: #121212;
+    border-radius: 6px;
+    grid-area: aside;
+    height: 75vh;
+}
+
+.main{
+    background-color: #121212;
+    border-radius: 6px;
+    grid-area: main;
+    overflow-y: scroll;
+    height: 75vh;
+}
+
+.player{
+    display: grid;
+    height: 70px;
+    border-radius: 6px;
+    grid-area: player;
+}
+

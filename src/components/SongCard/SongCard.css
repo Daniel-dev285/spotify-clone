@@ -1,0 +1,51 @@
+.song-card{
+    padding: 6px 16px;
+    display: grid;
+    grid-template-columns: 16px 2fr 2fr 0.5fr;
+    gap: 12px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.song-card:hover{
+    background-color: #323232;
+}
+
+.song-card-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.song-card-image{
+    display: flex;
+    align-items: center;
+}
+
+.song-card-image img{
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+.song-card-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.song-title{
+    font-size: 14px;
+}
+
+.song-artists {
+    font-size: 13px;
+    color: #868686;
+}
+
+.song-album , .song-duration, .song-number{
+    font-size: 14px;
+    color: #868686;
+}
+
+
+

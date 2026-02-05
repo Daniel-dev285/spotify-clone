@@ -1,0 +1,71 @@
+.sidebar-playlist-card{
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-playlist-card:hover .sidebar-playlist-card-overlay{
+    opacity: 1;
+}
+
+.sidebar-playlist-card:hover{
+    background-color: #232323;
+    border-radius: 6px;
+}
+
+.sidebar-playlist-card-figure{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sidebar-playlist-card-figure img{
+    object-fit: cover;
+    border-radius: 6px;
+    width: 50px;
+    height: 50px;
+}
+
+.sidebar-playlist-card-overlay{
+    overflow: hidden;
+    position: absolute;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: .5rem;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.405);
+}
+
+.sidebar-playlist-card-overlay svg{
+    fill: #fff;
+    width: 25px;
+}
+
+.sidebar-playlist-card-header {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-playlist-card-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-playlist-info-artists{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 280px;
+    font-size: .8rem;
+    color: #868686;
+}
+
+
