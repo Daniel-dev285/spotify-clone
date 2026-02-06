@@ -14,7 +14,7 @@ export function PlaylistCard({ playlist }: PlaylistProps) {
         >
             <CardPlayButton id={playlist?.id}/>
             <motion.picture 
-                className='w-40 h-40'
+                className='size-40'
                 layoutId={`playlist-image-${playlist?.id}`}
             >
                 <img className='w-full h-full object-cover rounded-sm'

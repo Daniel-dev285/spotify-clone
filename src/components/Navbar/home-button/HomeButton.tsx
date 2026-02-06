@@ -1,8 +1,8 @@
 import { HomeLogo } from '@/icons/HomeLogo'
-import { useNavbar } from '../hooks/useNavbar';
+import { useCustomNav } from '@/hooks/useCustomNav';
 
 export function HomeButton() {
-    const { goBack, isHome } = useNavbar()
+    const { goBack, isHome } = useCustomNav()
 
     return (
         <button

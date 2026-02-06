@@ -1,7 +1,11 @@
 import { useNavigate } from "react-router-dom";
+import { useLocation } from 'react-router-dom'
 
 export function useCustomNav() {
     const navigate = useNavigate()
+    const location = useLocation()
+
+    const isHome = location.pathname === '/'
 
     const goToPath = (path: string) => {
         document.startViewTransition(() => {
@@ -17,5 +21,5 @@ export function useCustomNav() {
 
     }
 
-    return { goToPath, goBack }
+    return { goToPath, goBack, isHome }
 }

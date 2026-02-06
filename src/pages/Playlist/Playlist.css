@@ -1,5 +1,4 @@
 .playlist-controller{
-    
     display: flex;
     align-items: center;
     gap: 20px;
@@ -38,29 +37,4 @@
     width: 30px;
     height: 30px;
     fill:  #1ed760;
-}
-
-.songs-table{
-    padding: 0 20px ;
-}
-
-.songs-table-header .time-span svg {
-    width: 20px;
-    fill:  #868686;
-}
-
-.songs-table-header{
-    padding: 0 16px;
-    display: grid;
-    grid-template-columns: 16px 2fr 2fr 0.5fr;
-    gap: 12px;
-}
-
-.songs-table-header{
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #383838;
-}
-
-.songs-table-header span{
-    color: #868686;
 }

@@ -10,17 +10,17 @@ import './Layout.css'
 export function Layout() {
     return (
         <>
-            <div className='grid-container'>
-                <header className='header'>
+            <div className='grid-container px-2 w-screen gap-2 '>
+                <header className='[grid-area:header] h-14'>
                     <Navbar/>
                 </header>
                 
 
-                <aside className='aside '>
+                <aside className='[grid-area:aside] bg-[#121212] rounded-sm h-[75vh] overflow-scroll'>
                     <Sidebar />
                 </aside>
 
-                <main className='main'>
+                <main className='[grid-area:main] bg-[#121212] rounded-sm h-[75vh] overflow-y-scroll'>
                     <AnimatePresence mode='wait'>
                         <Routes>
                             <Route path='/' element={<Home/>}/>
@@ -30,7 +30,7 @@ export function Layout() {
                     
                 </main>
                 
-                <footer className='player'>
+                <footer className='[grid-area:player]   '>
                     <Player />
                 </footer>
             </div>
