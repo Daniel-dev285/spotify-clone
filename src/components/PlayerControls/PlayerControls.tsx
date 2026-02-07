@@ -1,9 +1,9 @@
 import { useEffect, type RefObject } from 'react'
 import { usePlayerStore, type PlayerStore } from '../../store/playerStore'
-import { PlayBtnLogo } from '../../icons/PlayBtnIco'
-import { NextSongLogo } from '../../icons/NextSongLogo'
-import { PrevSongIco } from '../../icons/PrevSongIco'
-import { PauseIco } from '../../icons/PauseIco'
+import { PlayBtnLogo } from '../atoms/Icon/PlayBtnIco'
+import { NextSongLogo } from '../atoms/Icon/NextSongLogo'
+import { PrevSongIco } from '../atoms/Icon/PrevSongIco'
+import { PauseIco } from '../atoms/Icon/PauseIco'
 import { SongProgress } from '../SongProgress/SongProgress'
 
 interface PlayerControlsProps {

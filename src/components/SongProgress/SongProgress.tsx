@@ -1,4 +1,4 @@
-import { Slider } from "../Slider/slider";
+import { Slider } from "../atoms/Slider/slider";
 import { useEffect, type RefObject, useState } from "react";
 
 interface SongProgressProps {

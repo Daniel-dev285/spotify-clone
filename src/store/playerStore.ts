@@ -15,6 +15,6 @@ export const usePlayerStore = create<PlayerStore>((set) => ({
     currentPlaylist: null,
     currentSongIndex: 0,
     setIsPlaying: (isPlaying: boolean) => set({ isPlaying }),
-    setCurrentPlaylist: (playlist: Playlist) => set({currentPlaylist: playlist}),
+    setCurrentPlaylist: (playlist: Playlist) => set({currentPlaylist: playlist, currentSongIndex: 0 } ),
     setCurrentSongIndex: (index: number) => set({ currentSongIndex: index})
 }))

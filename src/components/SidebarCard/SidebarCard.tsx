@@ -1,9 +1,9 @@
 import { type Playlist } from '../../lib/data'
 import { useCustomNav } from '../../hooks/useCustomNav'
-import { PlayBtnLogo } from '../../icons/PlayBtnIco'
+import { PlayBtnLogo } from '../atoms/Icon/PlayBtnIco'
 
 export interface PlaylistProps {
-    playlist: Playlist | undefined
+    playlist: Playlist
     id?: string | null | undefined
 }
 

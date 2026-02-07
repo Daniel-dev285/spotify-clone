@@ -1,5 +1,5 @@
-import { CreateLogo } from '../../icons/CreateLogo'
-import { LibraryLogo } from '../../icons/LibraryLogo'
+import { CreateLogo } from '../atoms/Icon/CreateLogo'
+import { LibraryLogo } from '../atoms/Icon/LibraryLogo'
 import { playlists } from '../../lib/data' 
 import { SidebarCard } from '../SidebarCard/SidebarCard'
 

@@ -1,4 +1,4 @@
-import { Navbar } from '../components/Navbar/Navbar'
+import { Navbar } from '../components/organisms/Navbar/Navbar'
 import { Sidebar } from '../components/Sidebar/Sidebar'
 import { Home } from '../pages/Home/Home'
 import { Playlist } from '../pages/Playlist/Playlist'

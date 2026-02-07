@@ -1,6 +1,6 @@
 import { type PlaylistProps } from '../SidebarCard/SidebarCard'
 import { useCustomNav } from '../../hooks/useCustomNav'
-import { GoBackBtn } from '../../icons/GoBackBtn'
+import { GoBackBtn } from '../atoms/Icon/GoBackBtn'
 import { motion } from 'framer-motion'
 
 export function HeaderInfo({ playlist, id }: PlaylistProps) {

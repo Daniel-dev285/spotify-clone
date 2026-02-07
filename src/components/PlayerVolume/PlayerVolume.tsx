@@ -1,6 +1,6 @@
-import { VolumeIco, MuteIco } from '../../icons/VolumeIco'
+import { VolumeIco, MuteIco } from '../atoms/Icon/VolumeIco'
 import { useEffect, useRef, useState } from 'react'
-import { Slider } from '../Slider/slider'
+import { Slider } from '../atoms/Slider/slider'
 import { type RefObject } from 'react'
 
 interface PlayerVolumeProps {
