@@ -1,29 +1,5 @@
-export interface Playlist {
-  id: string,
-  albumId: number,
-  title: string,
-  cover: string,
-  artists: string[],
-  color: Color
-  playlistDuration: string
-  songs: Song[]
-}
+import { type Playlist } from "./types";
 
-export interface Song {
-  id: string;
-  albumId: number;
-  title: string;
-  image: string;
-  artists: string[];
-  album: string;
-  duration: string;
-}
-
-export interface Color {
-  accent: string,
-  dark: string,
-  transparent: string
-}
 
 export const playlists: Playlist[] = [
   {
@@ -168,7 +144,50 @@ export const playlists: Playlist[] = [
       }
     ]
   },
-  
+  {
+    id: '3',
+    albumId: 3,
+    title: "Ghost Avenue",
+    cover:
+      "https://i.scdn.co/image/ab67616d00001e029bcd0665cb000cc644163b92",
+    artists: ["Eve", "Sawano Hiroyuki", "Tatsuya Kitani"],
+    color: 
+    {
+      accent: "#009fcd",
+      dark: "#004263",
+      transparent: "#004263b3"
+    },
+    playlistDuration: "10 min 53 sec",
+    songs: [
+      {
+        "id": '1',
+        "albumId": 1,
+        "title": "Ghost Avenue",
+        "image": `https://i.scdn.co/image/ab67616d00001e029bcd0665cb000cc644163b92`,
+        "artists": ["Eve"],
+        "album": "Ghost Avenue",
+        "duration": "2:53"
+      },
+      {
+        "id": '2',
+        "albumId": 2,
+        "title": "Call your name",
+        "image": `https://i.scdn.co/image/ab67616d00001e022e09d63a7ba7fa7071e26524`,
+        "artists": ["Sawano Hiroyuki"],
+        "album": "AOT Soundtrack",
+        "duration": "4:28"
+      },
+      {
+        "id": '3',
+        "albumId": 3,
+        "title": "青のすみか",
+        "image": `https://i.scdn.co/image/ab67616d00001e0287d3383ad8d19ab88aa83a4a`,
+        "artists": ["Tatsuya Kitani"],
+        "album": "青のすみか",
+        "duration": "3:16"
+      },
+    ]
+  }
 ];
 
 
