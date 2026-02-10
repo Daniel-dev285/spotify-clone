@@ -1,4 +1,4 @@
-import { InstallAppLogo } from '@/Icon/InstallAppLogo'
+import { InstallAppLogo } from '@/Icons/InstallAppLogo'
 
 export function InstallAppButton({ }) {
   return (

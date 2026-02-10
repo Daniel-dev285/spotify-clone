@@ -187,6 +187,50 @@ export const playlists: Playlist[] = [
         "duration": "3:16"
       },
     ]
+  },
+  {
+    id: '4',
+    albumId: 4,
+    title: "Expedition 33 Bangers",
+    cover:
+      "https://i.scdn.co/image/ab67616d0000e1a36e2563012d66edb8f5ba4086",
+    artists: ["Lorien Testard", "Alice Duport-Percier"],
+    color: 
+    {
+      accent: "#ca261e",
+      dark: "#6c0302",
+      transparent: "#6c04029f"
+    },
+    playlistDuration: "20 min 22 sec",
+    songs: [
+      {
+        "id": '1',
+        "albumId": 1,
+        "title": "Une vie à t'aimer",
+        "image": `https://i.scdn.co/image/ab67616d0000e1a36e2563012d66edb8f5ba4086`,
+        "artists": ["Lorien Testard", "Alice Duport-Percier"],
+        "album": "Expedition 33 OST",
+        "duration": "11:00"
+      },
+      {
+        "id": '2',
+        "albumId": 2,
+        "title": "Alice",
+        "image": `https://i.scdn.co/image/ab67616d0000e1a36e2563012d66edb8f5ba4086`,
+        "artists": ["Lorien Testard", "Alice Duport-Percier"],
+        "album": "Expedition 33 OST",
+        "duration": "2:50"
+      },
+      {
+        "id": '3',
+        "albumId": 3,
+        "title": "Monoco",
+        "image": `https://i.scdn.co/image/ab67616d0000e1a36e2563012d66edb8f5ba4086`,
+        "artists": ["Lorien Testard", "Alice Duport-Percier"],
+        "album": "Expedition 33 OST",
+        "duration": "2:21"
+      },
+    ]
   }
 ];
 

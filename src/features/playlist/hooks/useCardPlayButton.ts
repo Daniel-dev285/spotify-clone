@@ -1,5 +1,4 @@
-import { usePlayerStore } from '@/features/player/store/playerStore'
-import { type PlayerStore } from '@/features/player/store/playerStore'
+import { usePlayerStore, type PlayerStore } from '@/features/player/store/playerStore'
 import { playlists } from '@/lib/data'
 
 export function useCardPlayButton(id: string) {

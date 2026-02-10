@@ -1,5 +1,5 @@
 import { type Playlist } from "@/lib/types"
-import { GoBackBtn } from '@/Icon/GoBackBtn'
+import { GoBackBtn } from '@/Icons/GoBackBtn'
 import { motion } from 'framer-motion'
 
 interface Props {

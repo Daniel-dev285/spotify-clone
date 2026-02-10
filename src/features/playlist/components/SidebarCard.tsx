@@ -1,7 +1,7 @@
 import { type Playlist } from '@/lib/types'
-import { CardPlayButton } from '@components/ui/CardPlayButton'
+import { PlayPauseBtn } from '@/components/ui/atoms/PlayPauseBtn'
 import { useCardPlayButton } from '../hooks/useCardPlayButton'
-import { VolumeIcoFilled } from '@/Icon/VolumeIco'
+import { VolumeIcoFilled } from '@/Icons/VolumeIco'
 
 interface Props {
     playlist: Playlist
@@ -18,13 +18,13 @@ export function SidebarCard({ playlist, onClick }: Props) {
             className='cursor-pointer p-2 flex items-center justify-between rounded-sm group hover:bg-primary'>
             <div className='flex items-center gap-2.5 justify-start'>
                 <figure className='flex items-center relative'>
-                    <CardPlayButton
+                    <PlayPauseBtn 
                         isPlaying={isPlaying}
                         onClick={handlePlayPause}
                         className={`overflow-hidden absolute rounded-sm top-0 right-0 bottom-0 left-0 p-2 bg-[#00000067] fill-icon-1 group-hover:opacity-100
-                    ${isPlaying ? 'active:opacity-100' : ' opacity-0'}`}>
-                    </CardPlayButton>
-
+                        ${isPlaying ? 'active:opacity-100' : ' opacity-0'}`}
+                        icoSize='lg'
+                    />
                     <img className='object-cover rounded-sm size-13' src={playlist?.cover} alt={playlist?.title} />
                 </figure>
 

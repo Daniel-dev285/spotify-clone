@@ -1,4 +1,4 @@
-import { SearchLogo } from '@/Icon/SearchIco'
+import { SearchLogo } from '@/Icons/SearchIco'
 
 export function NavbarSearch({ }) {
     return (

@@ -1,4 +1,4 @@
-import { HomeLogo } from '@/Icon/HomeLogo'
+import { HomeLogo } from '@/Icons/HomeLogo'
 import { useCustomNav } from '../hooks/useCustomNav';
 
 export function HomeButton() {

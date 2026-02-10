@@ -1,4 +1,4 @@
-import { NotiLogo } from '@/Icon/NotiLogo'
+import { NotiLogo } from '@/Icons/NotiLogo'
 
 export function NotificationButton({ }) {
   return (

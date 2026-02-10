@@ -1,6 +1,7 @@
 import { type Playlist } from '@/lib/types'
-import { CardPlayButton } from '@components/ui/CardPlayButton'
+import { PlayPauseBtn } from '@/components/ui/atoms/PlayPauseBtn'
 import { useCardPlayButton } from '../hooks/useCardPlayButton'
+import { greenPlayPause } from '@/styles/PlayPauseStyle'
 import { motion } from 'framer-motion'
 
 interface Props {
@@ -8,14 +9,13 @@ interface Props {
     onClick: (playlistId: string) => void
 }
 
-export function PlaylistCard({ playlist, onClick }: Props) {
-    if (!playlist) return
 
+
+export function PlaylistCard({ playlist, onClick }: Props) {
     const {isPlayingPlaylist: isPlaying, handlePlayPause} = useCardPlayButton(playlist?.id)
     
     return (
         <motion.div
-            layoutId={`container-${playlist.id}`}  
             onClick={() => onClick(playlist.id)} 
             className='flex flex-col gap-1.5 p-3 cursor-pointer relative group hover:bg-primary rounded-sm  transition-all'
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
@@ -25,10 +25,11 @@ export function PlaylistCard({ playlist, onClick }: Props) {
                 className='size-40 relative'
                 layoutId={`playlist-image-${playlist.id}`}
             >
-                 <CardPlayButton 
+                 <PlayPauseBtn 
                     isPlaying={isPlaying}
                     onClick={handlePlayPause}
-                    className={`bg-button-background rounded-full size-13 group-hover:opacity-100 group-hover:-translate-y-1.25 transition-all hover:bg-green-400  ${isPlaying ? 'active:opacity-100 -translate-y-1.25 ' : ' opacity-0'} absolute bottom-1 right-2`}
+                    className={`${greenPlayPause} ${isPlaying ? 'active:opacity-100 -translate-y-1.25 ' : ' opacity-0'}`}
+                    icoSize='lg'
                     />
                 <img className='w-full h-full object-cover rounded-sm'
                     src={playlist.cover}

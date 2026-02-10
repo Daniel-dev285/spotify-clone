@@ -1,18 +1,19 @@
-import { Slider } from "@/components/ui/Slider/slider";
-import { Time } from "@/components/ui/Time";
+import { Slider } from "@/components/ui/atoms/slider";
+import { Time } from "@/components/ui/atoms/Time";
 import { useSongProgress } from "@/features/player/hooks/useSongProgress";
 import { type RefObject } from "react";
 
-interface SongProgressProps {
+interface Props {
     audioRef: RefObject<HTMLAudioElement>
 }
 
-export function SongProgress({ audioRef }: SongProgressProps) {
+export function SongProgress({ audioRef }: Props) {
     const {currentTime, duration, seek} = useSongProgress(audioRef)
 
     return (
         <div className='flex items-center gap-2.5 h-5'>
             <Time value={currentTime}/>
+            
             <Slider
                 max={duration}
                 min={0}
