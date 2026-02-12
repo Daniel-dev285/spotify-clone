@@ -1,5 +1,5 @@
 import { type PlaylistProps } from '@/lib/types'
-import { TimeLogo } from '@/Icons/TimeLogo'
+import { TimeLogo } from '@/components/ui/atoms/Icons/TimeLogo'
 import { SongCard } from '@/features/playlist/components/SongCard'
 
 export function SongsTable({playlist}: PlaylistProps) {

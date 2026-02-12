@@ -11,7 +11,7 @@ export function Layout() {
     return (
         <>
             <div className='grid-container px-2 w-screen gap-2 '>
-                <header className='[grid-area:header] h-16'>
+                <header className='[grid-area:header] h-15'>
                     <Navbar/>
                 </header>
                 

@@ -1,4 +1,3 @@
-
 export function Time({ value }: { value: number }) {
     const minutes = Math.floor(value / 60)
     const secs = Math.floor(value % 60)

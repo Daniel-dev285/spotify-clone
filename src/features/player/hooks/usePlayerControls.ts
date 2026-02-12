@@ -1,7 +1,7 @@
-import { useEffect, type RefObject } from "react";
+import { type RefObject } from "react";
 import { usePlayerStore, type PlayerStore } from "../store/playerStore";
 
-export function usePlayerControls(audioRef: RefObject<HTMLAudioElement>) {
+export function usePlayerControls() {
     const { isPlaying,
         setIsPlaying,
         currentPlaylist,
@@ -35,27 +35,6 @@ export function usePlayerControls(audioRef: RefObject<HTMLAudioElement>) {
         )
         setIsPlaying(true)
     }
-
-    useEffect(() => {
-        if (!currentPlaylist) return
-
-        const song = currentPlaylist.songs[currentSongIndex]
-        if (!song || !audioRef.current) return
-
-        const src = `/audio/${currentPlaylist.id}/0${song.id}.mp3`
-        audioRef.current.src = src
-        audioRef.current.play()
-
-    }, [currentPlaylist, currentSongIndex])
-
-    useEffect(() => {
-        if (isPlaying && currentPlaylist) {
-            audioRef.current?.play()
-        }
-        else {
-            audioRef.current?.pause()
-        }
-    }, [isPlaying])
 
 
     return {

@@ -1,17 +1,19 @@
 import { useRef, type RefObject } from 'react'
+import { PlayerBarUI } from '@/components/ui/organisms/PlayerBarUI'
 import { PlayerSongCard } from './PlayerSongCard'
 import { PlayerVolume } from './PlayerVolume'
 import { PlayerControls } from './PlayerControls'
 
 export function Player() {
     const audioRef = useRef<HTMLAudioElement>(null) as RefObject<HTMLAudioElement>
-
+    
     return (
-        <div className='flex justify-between p-1.5'>
+        <PlayerBarUI 
+            left={<PlayerSongCard />}
+            center={<PlayerControls audioRef={audioRef} />}
+            right={<PlayerVolume audioRef={audioRef} />}
+            >
             <audio ref={audioRef} ></audio>
-            <PlayerSongCard />
-            <PlayerControls audioRef={audioRef} />
-            <PlayerVolume audioRef={audioRef} />
-        </div>
+        </PlayerBarUI>
     )
 }

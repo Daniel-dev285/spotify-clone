@@ -1,5 +1,5 @@
-import { Slider } from "@/components/ui/atoms/slider";
-import { Time } from "@/components/ui/atoms/Time";
+import { Slider } from "@/components/ui/atoms/Slider";
+import { Time } from "@/components/ui/atoms/TimeLabel";
 import { useSongProgress } from "@/features/player/hooks/useSongProgress";
 import { type RefObject } from "react";
 
@@ -18,7 +18,7 @@ export function SongProgress({ audioRef }: Props) {
                 max={duration}
                 min={0}
                 value={[currentTime]}
-                className="w-100 cursor-pointer h-5"
+                className="w-100"
                 onValueChange={([time]) => seek(time)}/>
             <Time value={duration}/>
         </div>);

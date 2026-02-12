@@ -1,1 +1,0 @@
-export { InstallAppButton } from './InstallAppButton'

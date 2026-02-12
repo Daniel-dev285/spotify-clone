@@ -1,36 +1,36 @@
 import { type Playlist } from '@/lib/types'
-import { PlayPauseBtn } from '@/components/ui/atoms/PlayPauseBtn'
+import { Button } from '@/components/ui/atoms/Button'
 import { useCardPlayButton } from '../hooks/useCardPlayButton'
-import { greenPlayPause } from '@/styles/PlayPauseStyle'
+import { green } from '@components/styles/ButtonStyles'
 import { motion } from 'framer-motion'
+import { PauseIco } from '@/components/ui/atoms/Icons/PauseIco'
+import { PlayBtnLogo } from '@/components/ui/atoms/Icons/PlayBtnIco'
 
 interface Props {
     playlist: Playlist
     onClick: (playlistId: string) => void
 }
 
-
-
 export function PlaylistCard({ playlist, onClick }: Props) {
-    const {isPlayingPlaylist: isPlaying, handlePlayPause} = useCardPlayButton(playlist?.id)
-    
+    const { isPlayingPlaylist: isPlaying, handlePlayPause } = useCardPlayButton(playlist?.id)
+
     return (
         <motion.div
-            onClick={() => onClick(playlist.id)} 
+            onClick={() => onClick(playlist.id)}
             className='flex flex-col gap-1.5 p-3 cursor-pointer relative group hover:bg-primary rounded-sm  transition-all'
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
         >
-           
-            <motion.picture 
+
+            <motion.picture
                 className='size-40 relative'
                 layoutId={`playlist-image-${playlist.id}`}
             >
-                 <PlayPauseBtn 
-                    isPlaying={isPlaying}
+                <Button
                     onClick={handlePlayPause}
-                    className={`${greenPlayPause} ${isPlaying ? 'active:opacity-100 -translate-y-1.25 ' : ' opacity-0'}`}
-                    icoSize='lg'
-                    />
+                    className={`${green} ${isPlaying ? 'active:opacity-100 -translate-y-1.25 ' : ' opacity-0'}`}
+                    size='lg'
+                    icon={isPlaying ? <PauseIco /> : <PlayBtnLogo />}
+                />
                 <img className='w-full h-full object-cover rounded-sm'
                     src={playlist.cover}
                     alt={playlist.title}

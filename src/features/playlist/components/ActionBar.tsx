@@ -1,23 +1,36 @@
 import { type PlaylistProps } from '@/lib/types'
-import { PlayPauseBtn } from '@/components/ui/atoms/PlayPauseBtn'
-import { useCardPlayButton } from '@/features/playlist/hooks/useCardPlayButton'
-import { AddToFav } from '@/Icons/AddToFav'
+import { Button } from '@/components/ui/atoms/Button'
+import { AddToFav } from '@/components/ui/atoms/Icons/AddToFav'
+import { PauseIco } from '@/components/ui/atoms/Icons/PauseIco'
+import { PlayBtnLogo } from '@/components/ui/atoms/Icons/PlayBtnIco'
+import { ActionBarUI } from '@/components/ui/molecules/ActionBarUI'
+import { useCardPlayButton } from '../hooks/useCardPlayButton'
 
-export function ActionBar({playlist}: PlaylistProps) {
-    const {isPlayingPlaylist: isPlaying, handlePlayPause} = useCardPlayButton(playlist?.id)
+export function ActionBar({ playlist }: PlaylistProps) {
+    const { isPlayingPlaylist: isPlaying, handlePlayPause } = useCardPlayButton(playlist?.id)
+
     return (
-        <div 
-        style={{ background: `linear-gradient(to bottom, ${playlist?.color.transparent}, #12121200)` }} 
-        className='flex items-center gap-5 p-5'>
-            <PlayPauseBtn
-            isPlaying={isPlaying}
-            onClick={handlePlayPause}
-            className={`bg-button-background rounded-full size-13 transition-all hover:scale-105 hover:bg-green-400`}
-            icoSize='lg'
+        <ActionBarUI
+            style={{ 
+                background: `linear-gradient(
+                to bottom,
+                ${playlist?.color.transparent},
+                #12121200)
+                `}}
+            >
+            <Button
+                onClick={handlePlayPause}
+                className={"bg-button-background rounded-full size-13 transition-all hover:scale-105 hover:bg-green-400"}
+                size='lg'
+                icon={isPlaying 
+                    ? <PauseIco /> 
+                    : <PlayBtnLogo />}
             />
-            <button className='flex bg-transparent cursor-pointer '>
-                <AddToFav className='size-8 fill-secondary-foreground'/>
-            </button>
-        </div>
+            <Button 
+            size='lg'
+            icon={<AddToFav className='fill-secondary-foreground' />}
+            className='bg-transparent transition-transform hover:scale-105'>
+            </Button>
+        </ActionBarUI>
     )
 }
